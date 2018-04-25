@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MadengView"><!--自定义view第一步，定义属性-->
+        <attr name="madeng_text_color" format="color|reference"/>
+        <attr name="madeng_text_size" format="float"/>
+        <attr name="madeng_text_speed" format="float"/>
+
+        <attr name="madeng_recycle_mode" format="enum">
+            <enum name="recycle_once" value="0"/>            <!--播放一次-->
+            <enum name="recycle_interval" value="1"/>       <!--连续播放  循环结束继续下次播放-->
+            <enum name="recycle_continuous" value="2"/>     <!--连续播放  到末尾直接继续下次播放-->
+        </attr>
+
+        <attr name="madeng_text_distance" format="integer"/>       <!--每个item之间的距离-->
+        <attr name="madeng_text_startlocaiton" format="float"/>   <!--开始的起始位置 按距离控件左边的百分比 0~1之间 -->
+
+        <attr name="madeng_isclickable_stop" format="boolean"/>   <!--是否点击暂停-->
+        <attr name="madeng_isresetlocation" format="boolean"/>    <!--重新改变内容的时候 ， 是否初始化 位置，默认为true，改变-->
+    </declare-styleable>
+</resources>
