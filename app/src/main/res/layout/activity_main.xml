@@ -1,19 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/bt_control0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内容添加" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_control4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2颜色" />
+        <Button
+            android:id="@+id/bt_control24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2大小" />
+
+        <Button
+            android:id="@+id/bt_control23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2速度" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3继续" />
+        '
+
+        <Button
+            android:id="@+id/bt_control2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3停止" />
+
+        <Button
+            android:id="@+id/bt_control00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3间距变大" />
+    </LinearLayout>
+
+
+    <com.example.shang.madengviewdemo.MadengView
+        android:id="@+id/mv_main1"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorAccent"
+        app:madeng_isresetlocation="false"
+        app:madeng_recycle_mode="recycle_once"
+        app:madeng_text_distance="30"
+        app:madeng_text_size="10"
+        app:madeng_text_speed="3" />
+
+    <com.example.shang.madengviewdemo.MadengView
+        android:id="@+id/mv_main2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+
+        app:madeng_isresetlocation="false"
+        app:madeng_isclickable_stop="true"
+        app:madeng_recycle_mode="recycle_interval"
+        app:madeng_text_speed="2"
+        app:madeng_text_startlocaiton="0.5" />
+
+    <com.example.shang.madengviewdemo.MadengView
+        android:id="@+id/mv_main3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:madeng_recycle_mode="recycle_continuous"
+        app:madeng_text_size="15"
+        app:madeng_text_speed="2" />
+
+</LinearLayout>
